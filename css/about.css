@@ -1,0 +1,148 @@
+/* -------------------- CLASSES ET STYLES GENERAUX ---------------- */
+
+:root {
+    --back: #363D42;
+    --text: #ffffff;
+    --green: #5b8c85;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--green);
+    color: var(--text);
+}
+
+main {
+/* pour sortir le 'main' de sous le 'header'  */
+    margin-top: 200px;
+    min-height: 100vh;
+    background: url(../img2/globeuse.jpg);
+    background-size: cover;
+    background-attachment: fixed;    
+    font-family: 'Indie Flower', cursive;
+}
+
+
+/*------------------------------------ MOBILE ---------------------------------------------------*/
+
+#about {
+    padding: 150px 0;
+    border-radius: 5px;
+    background-color: rgba(91, 140, 133, 0.3);
+    text-align: justify;
+}
+
+#about img {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin: 0px 10px 10px 0px;
+    border-radius: 5px;
+}
+
+#article1 {
+    width: 70%;
+    margin: auto;
+    padding: 60px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgba(91, 140, 133, 0.4);
+}
+
+#article1 span {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    font-size: 23px;
+    font-family: 'Indie Flower', cursive;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+}
+
+#about button {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(54, 61, 66);
+    color: var(--text);
+    outline: 0;
+    border: transparent;
+    float: right;
+}
+
+#about button:hover {
+    border: 1px solid white;
+}
+
+#article2 {
+    display: none;
+    width: 60%;
+    margin: auto;
+    padding: 60px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgba(163, 154, 101, 0.7);
+}
+
+.about_modal {
+    display: none;
+}
+
+
+cite {
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+
+.fa-times-circle {
+    font-size: 30px;
+    float: right;
+}
+
+
+/*--------------------------------------------- TABLETTE & DESKTOP  --------------------------------*/
+
+@media (min-width: 780px) {
+
+    #about {
+        padding: 150px 0;
+    }
+        
+    #article1 span {
+        display: block;
+    }
+
+    #about img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    #article2 {
+        padding: 60px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .about_modal {
+        display: block;
+    }
+
+}

@@ -1,0 +1,185 @@
+/* -------------------- CLASSES ET STYLES GENERAUX ---------------- */
+
+:root {
+  --back: #363D42;
+  --text: #ffffff;
+  --green: #5b8c85;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: var(--green);
+  color: var(--text);
+}
+
+main {
+  /* pour sortir le 'main' de sous le 'header'  */
+  margin-top: 300px;
+  min-height: 100vh;
+}
+
+
+/*-------------------------  MOBILE --------------------------*/
+
+
+header {
+  background-color: rgba(54, 61, 66, 0.8);
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid white;
+  z-index: 10;
+  font-family: 'Permanent Marker', cursive;
+  display: grid;
+  grid-template-areas: 'logo title burger';
+  grid-template-columns: 1fr 10fr 2fr;
+}
+
+#nav_menu,
+#title_desk {
+  display: none;
+}
+
+#title_mobile {
+  display: block;
+  font-size: 30px;
+}
+
+
+#burger {
+  font-size: 50px;
+  grid-area: burger;
+  padding-top: 30px;
+}
+
+#nav_logo {
+  grid-area: logo;
+  width: 140px;
+  height: 140px;
+}
+
+#nav_title {
+  grid-area: title;
+  margin-left: 20px;
+  padding-top: 30px;
+  margin-right: 5px;
+  text-shadow: 1px 1px 1px rgba(54, 61, 66);
+}
+
+#nav_menu {
+  margin-top: 80px;
+}
+
+#nav_menu ul {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding-left: 40px;
+}
+
+#nav_menu ul a {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(54, 61, 66);
+}
+
+#nav_menu ul li {
+  list-style-type: none;
+  padding: 10px;
+  font-size: 23px;
+}
+
+#nav_menu a:hover {
+  font-size: 25px;
+}
+
+#title_mobile,
+#title_desk {
+  margin-top: 0;
+}
+
+
+/*-------------------------  TABLETTE  --------------------------*/
+
+@media (min-width: 780px) {
+
+  header {
+    display: grid;
+    grid-template-areas:
+      'logo title .'
+      '. ul . ';
+    grid-template-columns: 1fr 10fr 3fr;
+  }
+
+  #burger,
+  #cross,
+  #title_mobile {
+    display: none;
+  }
+
+  #nav_menu,
+  #title_desk {
+    display: block !important;
+  }
+
+  #nav_title {
+    line-height: 40px;
+    font-size: 21px;
+    display: block !important;
+  }
+
+
+  #nav_logo {
+    position: static !important;
+    opacity: 1 !important;
+  }
+
+  #nav_menu {
+    grid-area: ul;
+    margin-top: -80px;
+    margin-left: 100px;
+  }
+
+  #nav_menu ul li {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+}
+
+
+/*-------------------------  DESKTOP  --------------------------*/
+
+@media (min-width: 1230px) {
+
+  header {
+    grid-template-areas:
+      'logo title .'
+      '.  . ul';
+    grid-template-columns: 0.5fr 45% 3fr;
+    grid-template-rows: 5fr 1fr;
+    height: 250px;
+  }
+
+  #nav_title {
+    line-height: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+
+  #nav_menu {
+    margin-left: -30px;
+  }
+
+  #nav_menu ul li {
+    font-size: 23px;
+    padding: 10px;
+  }
+
+
+}

@@ -1,0 +1,133 @@
+/* -------------------- CLASSES ET STYLES GENERAUX ---------------- */
+
+:root {
+    --back: #363D42;
+    --text: #ffffff;
+    --green: #5b8c85;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: var(--green);
+    background: no-repeat url('../img2/beach.jpg'), rgba(54, 61, 66, 0.3);
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+main {
+    /* pour sortir le 'main' de sous le 'header'  */
+    margin-top: 300px;
+    min-height: 100vh;
+}
+
+
+/*--------------------------------------- MOBILE ---------------------------------------------*/
+
+.far {
+    color: white;
+    font-size: 30px;
+}
+
+#menu_central button {
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: var(--back);
+    color: var(--text);
+    border: none;
+    outline: 0;
+}
+
+#menu_central ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px;
+    flex-wrap: wrap;
+}
+
+#menu_central li {
+    margin: 10px 30px;
+    list-style-type: none;
+}
+
+#menu_central a {
+    color: var(--text);
+}
+
+#page_centrale {
+    padding: 50px;
+    text-align: center;
+}
+
+
+.vignette {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.vignette>* {
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+.vignette article {
+    width: 400px;
+    height: 400px;
+    border-radius: 4px;
+    background-size: cover;
+    border: 2px solid white;
+}
+
+.vignette h1 {
+    font-size: 40px;
+    padding: 0 10px;
+    width: 200px;
+    margin-left: 90px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 1px grey;
+}
+
+
+/* pour alléger l'affichage principal de la moitié des vignettes
+mais restent selectionnables lors du filtre */
+
+.off {
+    display: none;
+}
+
+.zoom {
+    transition: transform 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    /* (110% zoom) */
+}
+
+
+/*-------------------------  TABLETTE & DESKTOP --------------------------*/
+
+@media (min-width: 780px) {
+
+    .vignette article {
+        width: 300px;
+        height: 300px;
+    }
+
+    .vignette h1 {
+        margin-left: 40px;
+    }
+
+
+}
